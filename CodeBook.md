@@ -29,6 +29,6 @@ Script run_analysis.R performs following operations:
 13. Subsets data table "run_small" by variables "Activity" and "Subject" and calculates means of all other variables. Saves resulting data table as "run_analysis".
 12. Converts "run_analysis" to data frame.
 13. Renames first two variables in "run_analysis" to "Subject" and "Activity".
-14. Saves data frame "run_analysis" to file "run_analysis.csv" in working directory.
+14. Saves data frame "run_analysis" to file "run_analysis.txt" in working directory.
 
 Script was developed and tested with R ver.3.0.2, operating system Windows 7.

@@ -5,11 +5,11 @@ subject_train <- read.table("./UCI HAR Dataset/train/subject_train.txt", quote="
 X_train <- read.table("./UCI HAR Dataset/train/X_train.txt", quote="\"")
 y_train <- read.table("./UCI HAR Dataset/train/y_train.txt", quote="\"")
 #rename variables for activities
-y_train$Activity=activity_labels[y_train$V1,2]
+y_train$Activity<-activity_labels[y_train$V1,2]
 y_train$V1=NULL
 #add column with subjects and rename variable
-y_train=cbind(y_train,subject_train)
-y_train$Subject=y_train$V1
+y_train<-cbind(y_train,subject_train)
+y_train$Subject<-y_train$V1
 y_train$V1=NULL
 #rename variables in X_train data frame from features data_frame
 names(X_train)<-features$V2
@@ -48,4 +48,4 @@ run_analysis<-as.data.frame(run_analysis)
 names(run_analysis)[1]<-"Subject"
 names(run_analysis)[2]<-"Activity"
 # Write run_analysis.csv file to working directory
-write.csv(run_analysis,"run_analysis.csv")
+write.table(run_analysis,"run_analysis.txt")
